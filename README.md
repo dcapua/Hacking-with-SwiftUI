@@ -1,1 +1,1 @@
-Playing around Swift before diving into SwiftUI!
+Playing around with Swift before diving into SwiftUI!
