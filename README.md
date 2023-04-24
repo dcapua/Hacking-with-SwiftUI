@@ -1,1 +1,1 @@
-Playing around with Swift before diving into SwiftUI!
+Hacking with Swift exercises.

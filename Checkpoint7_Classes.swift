@@ -55,9 +55,7 @@ class Lion:Cat{
 }
 
 //test
-let animal = Animal(numLegs: 4)
-let dog = Dog(numLegs: 4)
-let cat = Cat(numLegs: 4, isTame: true)
+
 let corgi = Corgi(numLegs: 4)
 let poodle = Poodle(numLegs: 4)
 let persian = Persian(numLegs: 4, isTame: true)
@@ -67,5 +65,3 @@ corgi.speak()
 poodle.speak()
 persian.speak()
 lion.speak()
-
-
