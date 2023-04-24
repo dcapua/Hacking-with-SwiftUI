@@ -1,1 +1,1 @@
-Hacking with Swift exercises.
+Hacking with SwiftUI exercises.
