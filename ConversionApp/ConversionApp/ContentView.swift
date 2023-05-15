@@ -60,11 +60,20 @@ struct ContentView: View {
                             Text($0)
                         }
                     }
+                    //.pickerStyle(.segmented)
                 }
             } header : {
                 Text("Output temperature")
             }
             
+        }
+        .toolbar { //lets us specify toolbar items for a view
+            ToolbarItemGroup(placement: .keyboard){ // only keep space when keyboard is visible
+                Spacer()
+                Button("Done"){
+                    tempIsFocused = false
+                }
+            }
         }
     }
 }
