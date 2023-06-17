@@ -27,16 +27,21 @@ struct ContentView: View {
             Color.green
                 .ignoresSafeArea()
             VStack {
-                Text("Score: \(playerScore)").font(.largeTitle).bold().padding()
-                
+                Spacer()
+                Text("Score: \(playerScore)")
+                    .font(.largeTitle)
+                    .bold()
+                    .padding()
+                    .background(.regularMaterial)
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
                 //--
                 Text("Game: \(gameCount)/10").bold()
                 //--
                 Text(possibleMoves[appCurrentChoice]).font(.system(size:200)) //emoji
                 //--
-                shouldWin ? Text("Intention: WIN!") : Text("Intention: LOSE!")
+                (shouldWin ? Text("Intention: WIN!") : Text("Intention: LOSE!"))
                     .font(.subheadline).bold()
-                
+                Spacer()
                 //--
                 HStack{
                     ForEach(0..<3){number in
@@ -48,14 +53,16 @@ struct ContentView: View {
                         
                     }
                 }
+                .background(.regularMaterial)
+                .clipShape(RoundedRectangle(cornerRadius: 20))
             }
-            .padding()
             .alert("Final game. Resetting...", isPresented: $showingFinalAlert){
                 Button("Start Next Game", action: reset)
             }
             .alert(scoreTitle, isPresented: $showingScore){
                 Button("Continue", action: doMove)
             }
+            
         }
         
        
