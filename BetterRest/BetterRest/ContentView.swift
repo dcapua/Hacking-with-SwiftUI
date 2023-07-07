@@ -85,7 +85,7 @@ struct ContentView: View {
             .alert("Error", isPresented: $showingAlert){
                 Button("OK"){}
             } message: {
-                Text("\(calculateBedTime())")
+                Text("\(calculateBedTime())") // prints "Error, try again"
             }
         }
     }
